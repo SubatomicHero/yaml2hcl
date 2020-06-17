@@ -38,6 +38,7 @@ func getValue(value interface{}) cty.Value {
 		return cty.ListVal(vals)
 	default:
 		// type not handled yet
+		fmt.Printf("** yaml2hcl ** type is %s", t)
 		return cty.NullVal(cty.String)
 	}
 }
